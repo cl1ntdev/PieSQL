@@ -16,3 +16,6 @@ def main():
             print("error")
     except Error as e:
         print(e)    
+        
+        
+main();
