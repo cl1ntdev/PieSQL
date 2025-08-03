@@ -10,7 +10,20 @@ db = "pyweirdool"
 port =3306
 
 def main():
-   print("1. Get all Data")
+# Crud
+   print("1. Get Data")
+   # Get specific Data
+   # Get all Data 
+   print("2. Insert Data")
+   # insert specific Data
+   # insert all Data
+   print("3. Update Data")
+   # update specific Data
+   # update all Data
+   print("1. Delet all Data")
+   # delete specific Data
+   # delete all Data
+   
    ch = int(input("Choice: "))
    
    match ch:
