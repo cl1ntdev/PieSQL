@@ -15,7 +15,11 @@ def main():
    
    match ch:
        case 1:
-          print("Choice is "+ ch +" result is: ")
+          try:
+              print("Choice is "+ ch +" result is: ")
+              data = GetAllData(defaultConnection(),"words")
+          except Error as e:
+              print("Error is",e)
          
            
        
