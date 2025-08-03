@@ -11,15 +11,13 @@ port =3306
 
 def main():
    print("1. Get all Data")
-   ch = input("Choice: ")
+   ch = int(input("Choice: "))
    
    match ch:
        case 1:
-          try:
-              print("Choice is "+ ch +" result is: ")
-              data = GetAllData(defaultConnection(),"words")
-          except Error as e:
-              print("Error is",e)
+            print("Choice is "+ str(ch) +" result is: ")
+            data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
+            print(data)
          
            
        

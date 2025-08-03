@@ -9,7 +9,7 @@ def GetAllData(conn,tableName):
         
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query)
-        result = cursor.fetchAll()
+        result = cursor.fetchall()
         conn.close()
         return {"data": result}
     except Error as e:
