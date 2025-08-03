@@ -11,18 +11,22 @@ port =3306
 
 def main():
 # Crud
-   print("1. Get Data")
-   # Get specific Data
-   # Get all Data 
-   print("2. Insert Data")
-   # insert specific Data
-   # insert all Data
-   print("3. Update Data")
-   # update specific Data
-   # update all Data
-   print("1. Delet all Data")
-   # delete specific Data
-   # delete all Data
+   print("GET DATA")
+   print("1. Specific Data")
+   print("2. All Data")
+   
+   print("INSERT DATA")
+   print("3. Specific Data")
+   print("4. Get All Data")
+   
+   print("UPDATE DATA")
+   print("5. Specific Data")
+   print("6. All Data")
+   
+   print("DELETE DATA")
+   print("7. Specific Data")
+   print("8. All Data")
+   
    
    ch = int(input("Choice: "))
    
