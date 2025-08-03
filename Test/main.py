@@ -8,14 +8,21 @@ db = "pyweirdool"
 port =3306
 
 def main():
-    try:
-        connection = createConnection(host,username,password,db)
-        if connection:
-            print("suceessfully connected")
-        else: 
-            print("error")
-    except Error as e:
-        print(e)    
-        
+   print("1. Get all Data")
+   ch = input("Choice: ")
+   
+   match ch:
+       case 1:
+          print("Choice is "+ ch +" result is: ") 
+           
+       
+       
+       
+       
+       
+       
+       
+       
+
         
 main();
