@@ -1,5 +1,9 @@
 import mysql.connector
 from mysql.connector import Connect, Error
+from fastapi import FastAPI
+
+app = FastAPI()
+
 
 def createConnection(host,username,password,db):
     connection = None
