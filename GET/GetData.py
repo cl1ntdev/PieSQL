@@ -1,16 +1,20 @@
 from mysql.connector import Error
-from connector.DbConnection import app
+from connector.DbConnection import app,defaultConnection
 
 @app.get("/getData")
-def GetAllData(conn,tableName):
-    query = "Select * from " + tableName
-    connection = None
+def GetAllData():
+    query = "Select * from words"
+  
     try:
-        connection = conn
+        connection = defaultConnection()
+        if not connection:
+            return{"error":"connection getData failed"}
+            
+            
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query)
         result = cursor.fetchall()
-        conn.close()
+        connection.close()
         return {"data": result}
     except Error as e:
         print("Error is ",e)
