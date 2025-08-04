@@ -7,7 +7,6 @@ def GetAllData(conn,tableName):
     connection = None
     try:
         connection = conn
-        
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query)
         result = cursor.fetchall()
