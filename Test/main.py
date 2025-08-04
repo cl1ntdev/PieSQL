@@ -1,6 +1,6 @@
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
-from GET.GetData import GetAllData
+from GET.Trigger.GetDataTrigger import GetAllData
 
 
 host = '127.0.0.1'
