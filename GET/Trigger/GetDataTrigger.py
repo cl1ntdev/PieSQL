@@ -1,7 +1,6 @@
 from mysql.connector import Error
 from connector.DbConnection import app
 
-@app.get("/getData")
 def GetAllData(conn,tableName):
     query = "Select * from " + tableName
     connection = None
