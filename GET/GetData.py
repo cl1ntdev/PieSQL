@@ -1,15 +1,12 @@
 from mysql.connector import Error
 from connector.DbConnection import app
-from connector.DbConnection import defaultConnection
-
 
 @app.get("/getData")
-def GetAllData():
-    tableName = "words"
+def GetAllData(conn,tableName):
     query = "Select * from " + tableName
     connection = None
     try:
-        connection = defaultConnection()
+        connection = conn
         cursor = connection.cursor(dictionary=True)
         cursor.execute(query)
         result = cursor.fetchall()
