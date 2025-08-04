@@ -2,7 +2,7 @@ from mysql.connector import Error
 from connector.DbConnection import app,defaultConnection
 
 @app.get("/getData")
-def GetAllData(table):
+def GetAllDataNoTrigger(table):
     query = "Select * from words"
   
     try:
