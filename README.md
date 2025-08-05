@@ -5,6 +5,7 @@ Trying to setup backend for future projects
 1. Basic CRUD and functions for data modification
 3. Create class for CRUD of a table
 4. Create post to change data ?
+5. Insert Data
 
 ## Folders
 
