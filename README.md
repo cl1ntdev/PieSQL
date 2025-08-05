@@ -4,14 +4,14 @@ Trying to setup backend for future projects
 ## TODO
 1. Basic CRUD and functions for data modification
 3. Create class for CRUD of a table
-
+4. Create post to change data ?
 
 ## Folders
 
-> connector.dbConnection has function 
+> connector.dbConnection has function
  - createConnection // manual make connection for different database connections
- - defaultConnection // used for a single database  
- 
+ - defaultConnection // used for a single database
+
 > GET.NoTigger.getData
  - start server: uvicorn GET.NoTrigger.getData:app --reload
  - uses [app] from connector.dbConnection focused only on getting data
