@@ -19,3 +19,13 @@ Trying to setup backend for future projects
 
 > POST.POSTData
  - uses [app] from connector.dbConnection focused only on post data
+
+
+# Functions
+  > GetAllDataConst(connection,tablename,constraint)
+  tableName = String
+  constraint = String (ex "where a like b")
+  
+  > GetAllData(connection,tablename)
+  - get all data, tableName = string
+  
