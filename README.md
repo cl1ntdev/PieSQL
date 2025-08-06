@@ -1,6 +1,5 @@
 Trying to setup backend for future projects
 
-
 ## TODO
 1. Basic CRUD and functions for data modification
 3. Create class for CRUD of a table
@@ -30,3 +29,5 @@ Trying to setup backend for future projects
   > GetAllData(connection,tablename)
   - get all data, tableName = string
   
+  > changeData(conn,tableName,value,valueTo)
+  - param conn = connection from sql, table name, first value, to change value
