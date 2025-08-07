@@ -1,4 +1,4 @@
-Trying to setup backend for future projects
+Goal: Backend Setup for future projects
 
 ## TODO
 1. Basic CRUD and functions for data modification
