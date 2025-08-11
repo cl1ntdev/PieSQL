@@ -1,7 +1,7 @@
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
 from GET.Trigger.GetDataTrigger import GetAllData
-
+from GET.Class.InsertClass import InsertDataTable
 
 host = '127.0.0.1'
 username = 'root'
@@ -32,10 +32,18 @@ def main():
    
    match ch:
        case 1:
-            print("Choice is "+ str(ch) +" result is: ")
-            data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
-            print(data)
-         
+           print("test")
+       case 2:
+           print("Choice is "+ str(ch) +" result is: ")
+           data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
+           print(data)
+       case 3:
+            sampleArr = ["test",2,3]
+            ins = InsertDataTable()
+            ins.addValues(sampleArr)
+            print(ins.insertData())
+            
+            
            
        
        
