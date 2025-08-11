@@ -12,8 +12,8 @@ port =3306
 def main():
 # Crud
    print("GET DATA")
-   print("1. Specific Data")
-   print("2. All Data")
+   print("1. Specific Data") # done
+   print("2. All Data") # done
    
    print("INSERT DATA")
    print("3. Specific Data")
