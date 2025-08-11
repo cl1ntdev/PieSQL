@@ -38,10 +38,10 @@ def main():
            data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
            print(data)
        case 3:
-            sampleArr = ["test",2,3]
-            ins = InsertDataTable()
-            ins.addValues(sampleArr)
-            print(ins.insertData())
+            tableName = "food"
+            valuesToInsert = ["macaron","1-int","nice"] # pass in the values here any valus
+            columnNames = ["column1","column2","column3"] # pass the column to with they are assigned 
+            insert = InsertDataTable()
             
             
            
