@@ -2,10 +2,11 @@ class InsertDataTable():
     def __init__(self):
         self.tableName = ""
         
-    def defineSelf(self,tableName,arrValues):
+    def defineSelf(self,tableName,valuesToInsert,colNames):
         self.tableName = tableName
-        self.arrValues = arrValues
-    
+        self.valInsert = valuesToInsert
+        self.colNames = colNames
+        
     def addValues(self,arrValues):
         self.arrValues = arrValues
         
