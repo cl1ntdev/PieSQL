@@ -42,6 +42,10 @@ def main():
             valuesToInsert = ["macaron","1-int","nice"] # pass in the values here any valus
             columnNames = ["column1","column2","column3"] # pass the column to with they are assigned 
             insert = InsertDataTable()
+            insert.addTableName(tableName)
+            insert.addValues(valuesToInsert)
+            insert.addColNames(columnNames)
+            insert.insertData()
             
             
            
