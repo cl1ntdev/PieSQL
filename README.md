@@ -2,7 +2,7 @@ Goal: Backend Setup for future projects
 
 ## TODO
 1. Basic CRUD and functions for data modification
-3. Create class for CRUD of a table
+3. <> Create class for CRUD of a table
 4. Create post to change data ?
 5. Insert Data
 
