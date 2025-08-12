@@ -51,7 +51,6 @@ class GetClass:
     # =========== #
     
     def updateData(self,tableName,_upColName,_upColValue,colConstraint,colConstVal):
-        query1 = "update " + self.tableName + " set " + self.upColName + "= "  + self.upColValue + " where " + self.colConstraint + "= " + self.colConstVal
         query2 = "update " + tableName + " set " + _upColName + "= "  + _upColValue + " where " + colConstraint + "= " + colConstVal
         
         print (query2)

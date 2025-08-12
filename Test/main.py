@@ -17,7 +17,7 @@ def main():
    
    print("INSERT DATA")
    print("3. Specific Data")
-   print("4. Get All Data")
+   print("4. All Data")
    
    print("UPDATE DATA")
    print("5. Specific Data")
@@ -31,13 +31,13 @@ def main():
    ch = int(input("Choice: "))
    
    match ch:
-       case 1:
-           print("test")
-       case 2:
-           print("Choice is "+ str(ch) +" result is: ")
-           data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
-           print(data)
-       case 3:
+        case 1:
+            print("test")
+        case 2:
+            print("Choice is "+ str(ch) +" result is: ")
+            data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
+            print(data)
+        case 3:
             tableName = "food"
             valuesToInsert = ["macaron","1-int","nice"] # pass in the values here any valus
             columnNames = ["column1","column2","column3"] # pass the column to with they are assigned 
@@ -46,6 +46,15 @@ def main():
             insert.addValues(valuesToInsert)
             insert.addColNames(columnNames)
             insert.insertData()
+        case 5: 
+            table = "food"
+            col1 = "sweet"
+            col1Val = "candy"
+            colConstraint = "ID"
+            colConstraintVal = "1"
+            update = GetClass()
+            update.updateData(table,col1,col1Val,colConstraint,colConstraintVal)
+            
             
             
            
