@@ -2,6 +2,7 @@ from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
 from GET.Trigger.GetDataTrigger import GetAllData
 from GET.Class.InsertClass import InsertDataTable
+from GET.Class.ReqClass import GetClass
 
 host = '127.0.0.1'
 username = 'root'
@@ -41,7 +42,7 @@ def main():
             tableName = "food"
             valuesToInsert = ["macaron","1-int","nice"] # pass in the values here any valus
             columnNames = ["column1","column2","column3"] # pass the column to with they are assigned 
-            insert = InsertDataTable()
+            insert = GetClass()
             insert.addTableName(tableName)
             insert.addValues(valuesToInsert)
             insert.addColNames(columnNames)

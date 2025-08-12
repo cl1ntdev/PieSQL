@@ -1,11 +1,6 @@
-class InsertDataTable():
+class GetClass:
     def __init__(self):
         self.tableName = ""
-        
-    def defineSelf(self,tableName,valuesToInsert,colNames):
-        self.tableName = tableName
-        self.valInsert = valuesToInsert
-        self.colNames = colNames
         
     def addTableName(self,tableName):
         self.tableName =  tableName
@@ -16,7 +11,15 @@ class InsertDataTable():
     def addColNames(self,colNames):
         self.colNames =  colNames
         
-      
+    def getAllQuery(self):
+        return "select * from " + self.tableName
+    
+    def defineSelf(self,tableName,valuesToInsert,colNames):
+        self.tableName = tableName
+        self.valInsert = valuesToInsert
+        self.colNames = colNames
+        
+    # insert Data
     def insertData(self):  
         
         numIndicator = "-int"
