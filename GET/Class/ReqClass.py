@@ -1,3 +1,6 @@
+from fastapi.param_functions import Query
+
+
 class GetClass:
     def __init__(self):
         self.tableName = ""
@@ -18,8 +21,17 @@ class GetClass:
         self.tableName = tableName
         self.valInsert = valuesToInsert
         self.colNames = colNames
-        
-    # insert Data
+       
+       # Use for updating
+    def addUpdateVal(self,_upColName,_upColValue,colConstraint,colConstVal):
+        self.upColName = _upColName
+        self.upColValue = _upColValue
+        self.colConstraint = colConstraint
+        self.colConstVal = colConstVal
+       
+    # =========== # 
+    # Insert Data #
+    # =========== # 
     def insertData(self):  
         
         numIndicator = "-int"
@@ -33,3 +45,12 @@ class GetClass:
         query+=colVal
         
         return query 
+        
+    # =========== # 
+    # Update Data #
+    # =========== #
+    
+    def updateData(self):
+        query = "update " + self.tableName + " set " + self.upColName + "= "  + self.upColValue + " where " + self.colConstraint + "= " + self.colConstVal
+        
+        print (query)
