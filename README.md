@@ -2,7 +2,6 @@ Goal: Backend Setup for future projects
 
 ## TODO
 
-4. Create post to change data ?
 7. Query indentification passing int or string
 8. Integrate db modification inside class so it wont be on a separate file 
 
