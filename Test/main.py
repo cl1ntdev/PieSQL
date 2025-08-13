@@ -1,3 +1,4 @@
+from ast import Delete
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
 from GET.Trigger.GetDataTrigger import GetAllData
@@ -33,6 +34,7 @@ def main():
    match ch:
         case 1:
             print("test")
+            
         case 2:
             print("Choice is "+ str(ch) +" result is: ")
             data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
@@ -58,8 +60,8 @@ def main():
             table = "word"
             colConstraint = "id"
             colConstraintVal = "1"
-            update = GetClass()
-            update.deleteData(table,colConstraint,colConstraintVal)
+            delete = GetClass()
+            delete.deleteData(table,colConstraint,colConstraintVal)
             
             
             
