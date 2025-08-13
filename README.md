@@ -4,6 +4,7 @@ Goal: Backend Setup for future projects
 
 4. Create post to change data ?
 7. Query indentification passing int or string
+8. Integrate db modification inside class so it wont be on a separate file 
 
 # NOTES
 -! Classes are still used to make query statements 
