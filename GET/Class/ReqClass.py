@@ -28,7 +28,13 @@ class GetClass:
         self.upColValue = _upColValue
         self.colConstraint = colConstraint
         self.colConstVal = colConstVal
-       
+    # =========== # 
+    # Read Data #
+    # =========== #
+    def readData(self,tableName):
+        query = "select * from " +  tableName
+        print(query)
+           
     # =========== # 
     # Insert Data #
     # =========== # 
@@ -54,7 +60,9 @@ class GetClass:
         query2 = "update " + tableName + " set " + _upColName + "= "  + _upColValue + " where " + colConstraint + "= " + colConstVal
         
         print (query2)
-        
+    # =========== # 
+    # Delte Data #
+    # =========== #
     def deleteData(self,tableName,colConstraint,colConstVal):
         query2 = "delete from " + tableName + " where " + colConstraint + "= " + colConstVal
         
