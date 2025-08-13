@@ -54,3 +54,9 @@ class GetClass:
         query2 = "update " + tableName + " set " + _upColName + "= "  + _upColValue + " where " + colConstraint + "= " + colConstVal
         
         print (query2)
+        
+    def deleteData(self,tableName,colConstraint,colConstVal):
+        query2 = "delete from " + tableName + " where " + colConstraint + "= " + colConstVal
+        
+        print (query2)
+    

@@ -54,6 +54,16 @@ def main():
             colConstraintVal = "1"
             update = GetClass()
             update.updateData(table,col1,col1Val,colConstraint,colConstraintVal)
+        case 7: 
+            table = "word"
+            colConstraint = "id"
+            colConstraintVal = "1"
+            update = GetClass()
+            update.deleteData(table,colConstraint,colConstraintVal)
+            
+            
+            
+            
             
             
             
