@@ -21,11 +21,9 @@ def main():
    
    print("UPDATE DATA")
    print("5. Specific Data")
-   print("6. All Data")
    
    print("DELETE DATA")
-   print("7. Specific Data")
-   print("8. All Data")
+   print("6. Specific Data")
    
    
    ch = int(input("Choice: "))
@@ -61,7 +59,7 @@ def main():
             colConstraintVal = "1"
             update = GetClass()
             update.updateData(table,col1,col1Val,colConstraint,colConstraintVal)
-        case 7: 
+        case 6: 
             table = "word"
             colConstraint = "id"
             colConstraintVal = "1"
