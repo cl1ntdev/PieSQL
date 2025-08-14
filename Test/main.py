@@ -1,7 +1,6 @@
 from ast import Delete
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
-from GET.Trigger.GetDataTrigger import GetAllData
 from GET.Class.ReqClass import GetClass
 
 host = '127.0.0.1'
@@ -38,10 +37,12 @@ def main():
             tableName = "word"
             constraint = "where id = 1"
             data = GetClass()
-            data.getAllDataConst(tableName,constraint)
+            data.readAllDataConst(tableName,constraint)
         case 2:
             print("Choice is "+ str(ch) +" result is: ")
-            data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
+            tableName = "word"
+            data = GetClass()
+            data.readData(tableName)
             print(data)
         case 3:
             tableName = "food"
