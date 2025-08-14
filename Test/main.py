@@ -14,23 +14,23 @@ def main():
    print("GET DATA")
    print("1. Specific Data") # done
    print("2. All Data") # done
-   
+
    print("INSERT DATA")
    print("3. Specific Data")
    print("4. All Data")
-   
+
    print("UPDATE DATA")
    print("5. Specific Data")
-   
+
    print("DELETE DATA")
    print("6. Specific Data")
-   
-   
+
+
    ch = int(input("Choice: "))
-   
+
    match ch:
         case 1:
-            
+
             print("test")
             tableName = "word"
             constraint = "where id = 1"
@@ -45,13 +45,13 @@ def main():
         case 3:
             tableName = "food"
             valuesToInsert = ["macaron","1-int","nice"] # pass in the values here any valus
-            columnNames = ["column1","column2","column3"] # pass the column to with they are assigned 
+            columnNames = ["column1","column2","column3"] # pass the column to with they are assigned
             insert = GetClass()
             insert.addTableName(tableName)
             insert.addValues(valuesToInsert)
             insert.addColNames(columnNames)
             insert.insertData()
-        case 5: 
+        case 5:
             table = "food"
             col1 = "sweet"
             col1Val = "candy"
@@ -59,28 +59,28 @@ def main():
             colConstraintVal = "1"
             update = GetClass()
             update.updateData(table,col1,col1Val,colConstraint,colConstraintVal)
-        case 6: 
+        case 6:
             table = "word"
             colConstraint = "id"
             colConstraintVal = "1"
             delete = GetClass()
             delete.deleteData(table,colConstraint,colConstraintVal)
-            
-            
-            
-            
-            
-            
-            
-           
-       
-       
-       
-       
-       
-       
-       
-       
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main();
