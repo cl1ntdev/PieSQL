@@ -33,8 +33,12 @@ def main():
    
    match ch:
         case 1:
-            print("test")
             
+            print("test")
+            tableName = "word"
+            constraint = "where id = 1"
+            data = GetClass()
+            data.getAllDataConst(tableName,constraint)
         case 2:
             print("Choice is "+ str(ch) +" result is: ")
             data = GetAllData(defaultConnection(),"words") # pass in the connection and the table name 
