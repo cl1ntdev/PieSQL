@@ -5,6 +5,13 @@ class GetClass:
     def __init__(self):
         self.tableName = ""
         
+    #  >> >> >> IMPORTANT << << << # 
+    #  Initialize connection first # 
+    #  >> >> >> IMPORTANT << << << #     
+    
+    def defineConnection(self,connection):
+        self.connection = connection
+    
     def addTableName(self,tableName):
         self.tableName =  tableName
     
