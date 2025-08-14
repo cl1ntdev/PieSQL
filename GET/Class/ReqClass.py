@@ -34,6 +34,11 @@ class GetClass:
     def readData(self,tableName):
         query = "select * from " +  tableName
         print(query)
+        
+    def getAllDataConst(self,tableName,constraint):
+        query = "Select * from " + tableName + " " + constraint
+        print(query)
+        
            
     # =========== # 
     # Insert Data #
