@@ -42,8 +42,9 @@ class GetClass:
         query = "select * from " +  tableName
         print(query)
         
-    def readAllDataConst(self,tableName,constraint):
-        query = "Select * from " + tableName + " " + constraint
+    def readAllDataConst(self,tableName,colConstraint,colConstVal):
+        # what if the colCOnstVal is either string or number 
+        query = "Select * from " + tableName + " where " + colConstraint + " = " + colConstVal
         print(query)
         
            
