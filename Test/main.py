@@ -33,9 +33,10 @@ def main():
 
             print("test")
             tableName = "word"
-            constraint = "where id = 1"
+            colConst = "id"
+            colConstVal = "1"
             data = GetClass()
-            data.readAllDataConst(tableName,constraint)
+            data.readAllDataConst(tableName,colConst,colConstVal)
         case 2:
             print("Choice is "+ str(ch) +" result is: ")
             tableName = "word"
