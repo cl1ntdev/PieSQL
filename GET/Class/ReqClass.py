@@ -9,9 +9,12 @@ class GetClass:
     #  Initialize connection first # 
     #  >> >> >> IMPORTANT << << << #     
     
+    # Define connection here
     def defineConnection(self,connection):
         self.connection = connection
-        print("connection is established: " + self.connection)
+    
+    def checkConnection(self):
+        print(self.connection)
     
     def addTableName(self,tableName):
         self.tableName =  tableName
@@ -28,8 +31,7 @@ class GetClass:
     def defineSelf(self,tableName,valuesToInsert,colNames):
         self.tableName = tableName
         self.valInsert = valuesToInsert
-        self.colNames = colNames
-       
+        self.colNames = colNames 
        # Use for updating
     def addUpdateVal(self,_upColName,_upColValue,colConstraint,colConstVal):
         self.upColName = _upColName

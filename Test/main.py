@@ -30,10 +30,13 @@ def main():
 
    match ch:
         case 1:
+            dbConnection = defaultConnection()
             tableName = "word"
             colConst = "id"
             colConstVal = "1-str"
             data = GetClass()
+            data.defineConnection(defaultConnection)
+            data.checkConnection()
             data.readAllDataConst(tableName,colConst,colConstVal)
         case 2:
             print("Choice is "+ str(ch) +" result is: ")
