@@ -34,3 +34,15 @@ Goal: Backend Setup for future projects
   
   > changeData(conn,tableName,value,valueTo)
   - param conn = connection from sql, table name, first value, to change value
+
+
+## HOW TO USE 
+> Parameters in ReqClass
+ - tableName: Table Name of a database 
+ - _upColName: Column Name to update its value
+ - _upColValue: Column Name to value use for update
+ - colConstraint: Column Constratint (where ->[id]<- = 1)
+ - colConstVal : Column value of the constraint (where id = ->[1]<-)
+
+> Passing Integer or String in params 
+ - use "-str" to indicate that the value is a string else dont use anythhing if ur passing an int
