@@ -36,7 +36,7 @@ class GetClass:
         self.colConstraint = colConstraint
         self.colConstVal = colConstVal
     
-    def strChecker(self,value):
+    def strChecker(self,value): # To check if the col constraintval (where id = ->[1]<-) is string
         if "-str" in value:
             return True
     
@@ -52,7 +52,7 @@ class GetClass:
         
         if self.strChecker(colConstVal):
             colConstVal = colConstVal.replace("-str","")
-            print("value is string")
+            colConstVal = '"' + colConstVal + '"'
          
         
         query = "Select * from " + tableName + " where " + colConstraint + " = " + colConstVal
