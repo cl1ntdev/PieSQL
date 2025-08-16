@@ -36,6 +36,9 @@ class GetClass:
         self.colConstraint = colConstraint
         self.colConstVal = colConstVal
     
+    def strChecker(self,value):
+        if "-str" in value:
+            return True
     
     # =========== # 
     # Read Data #
@@ -46,6 +49,12 @@ class GetClass:
         
     def readAllDataConst(self,tableName,colConstraint,colConstVal):
         # what if the colCOnstVal is either string or number 
+        
+        if self.strChecker(colConstVal):
+            colConstVal = colConstVal.replace("-str","")
+            print("value is string")
+         
+        
         query = "Select * from " + tableName + " where " + colConstraint + " = " + colConstVal
         print(query)
         

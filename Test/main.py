@@ -30,11 +30,9 @@ def main():
 
    match ch:
         case 1:
-
-            print("test")
             tableName = "word"
             colConst = "id"
-            colConstVal = "1"
+            colConstVal = "1-str"
             data = GetClass()
             data.readAllDataConst(tableName,colConst,colConstVal)
         case 2:
