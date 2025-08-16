@@ -11,6 +11,7 @@ class GetClass:
     
     def defineConnection(self,connection):
         self.connection = connection
+        print("connection is established: " + self.connection)
     
     def addTableName(self,tableName):
         self.tableName =  tableName
