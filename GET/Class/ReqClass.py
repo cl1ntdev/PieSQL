@@ -95,6 +95,7 @@ class GetClass:
     # Delte Data #
     # =========== #
     def deleteData(self,tableName,colConstraint,colConstVal):
+        colConstVal = self.strChecker(colConstVal)
         query2 = "delete from " + tableName + " where " + colConstraint + "= " + colConstVal
         
         print (query2)
