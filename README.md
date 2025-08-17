@@ -2,9 +2,7 @@ Goal: Backend Setup for future projects
 
 ## TODO
 
-7. <> Query indentification passing int or string
-8. Integrate db modification inside class so it wont be on a separate file 
-9. restructure and clean file before proceeding
+8. <> Integrate db modification inside class so it wont be on a separate file 
 
 # NOTES
 -! Classes are still used to make query statements 
