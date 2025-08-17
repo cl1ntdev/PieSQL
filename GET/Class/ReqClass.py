@@ -37,7 +37,9 @@ class GetClass:
     
     def strChecker(self,value): # To check if the col constraintval (where id = ->[1]<-) is string
         if "-str" in value:
-            return True
+            value = value.replace("-str","")
+            value = '"' + value + '"'
+            return value
     
     # =========== # 
     # Read Data #
@@ -47,15 +49,10 @@ class GetClass:
         print(query)
         
     def readAllDataConst(self,tableName,colConstraint,colConstVal):
-        # what if the colCOnstVal is either string or number 
-        
-        if self.strChecker(colConstVal):
-            colConstVal = colConstVal.replace("-str","")
-            colConstVal = '"' + colConstVal + '"'
-         
-        
-        query = "Select * from " + tableName + " where " + colConstraint + " = " + colConstVal
-        print(query)
+       
+       colConstVal = self.strChecker(colConstVal) # returns a value stringified ( 1-str -> "1" ) 
+       query = "Select * from " + tableName + " where " + colConstraint + " = " + colConstVal
+       print(query)
         
            
            
