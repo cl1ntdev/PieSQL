@@ -53,7 +53,7 @@ def main():
         case 5:
             table = "food"
             col1 = "sweet"
-            col1Val = "candy"
+            col1Val = "candy-str"
             colConstraint = "ID"
             colConstraintVal = "1"
             update = GetClass()

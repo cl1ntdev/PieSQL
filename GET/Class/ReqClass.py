@@ -82,9 +82,11 @@ class GetClass:
     # Update Data #
     # =========== #
     def updateData(self,tableName,_upColName,_upColValue,colConstraint,colConstVal):
-        query2 = "update " + tableName + " set " + _upColName + "= "  + _upColValue + " where " + colConstraint + "= " + colConstVal
+        _upColValue = self.strChecker(_upColValue)
+        colConstVal = self.strChecker(colConstVal)
+        query = "update " + tableName + " set " + _upColName + "="  + _upColValue + " where " + colConstraint + "= " + colConstVal
         
-        print (query2)
+        print (query)
         
         
         
