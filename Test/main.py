@@ -45,12 +45,10 @@ def main():
             print(data)
         case 3:
             tableName = "food"
-            valuesToInsert = ["macaron","1-int","nice"] # pass in the values here any valus
+            valuesToInsert = ["macaron","1-str","nice"] # pass in the values here any valus
             columnNames = ["column1","column2","column3"] # pass the column to with they are assigned
             insert = GetClass()
-            # insert.addTableName(tableName) # to be deleted redundant 
-            # insert.addValues(valuesToInsert) # to be deleted redundant 
-            # insert.addColNames(columnNames) # to be deleted redundant 
+           
             insert.insertData(tableName,columnNames,valuesToInsert)
         case 5:
             table = "food"
