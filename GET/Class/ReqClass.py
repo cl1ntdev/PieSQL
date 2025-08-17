@@ -31,6 +31,10 @@ class GetClass:
         self.colConstraint = colConstraint
         self.colConstVal = colConstVal
     
+    #  >> >> >> << << <<  # 
+    #   Data Manipulation # 
+    #  >> >> >> << << <<  #     
+    
     def strChecker(self,value): # To check if the col constraintval (where id = ->[1]<-) is string
         if "-str" in value:
             return True
