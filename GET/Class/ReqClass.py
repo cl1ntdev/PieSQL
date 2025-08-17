@@ -40,6 +40,8 @@ class GetClass:
             value = value.replace("-str","")
             value = '"' + value + '"'
             return value
+        else:
+            return value
     
     # =========== # 
     # Read Data #
@@ -62,6 +64,13 @@ class GetClass:
     # =========== # 
     def insertData(self,tableName,colNames,valInsert):  
         # insert into tableName(?) values (?)
+        modifiedValInsert = []
+        
+        for i in range(len(valInsert)): # column size is equal to values size or number of values to be inserted
+            print(valInsert[i])
+            modifiedValInsert.append(self.strChecker(valInsert[i]))
+    
+        print(modifiedValInsert)
         numIndicator = "-int"
         query = "insert into " + tableName + "(" + ",".join(colNames) + ")" + "values(" + ",".join(valInsert) + ")"
         # map the column where values to be added 
