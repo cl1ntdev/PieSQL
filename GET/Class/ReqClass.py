@@ -70,9 +70,7 @@ class GetClass:
             print(valInsert[i])
             modifiedValInsert.append(self.strChecker(valInsert[i]))
     
-        print(modifiedValInsert)
-        numIndicator = "-int"
-        query = "insert into " + tableName + "(" + ",".join(colNames) + ")" + "values(" + ",".join(valInsert) + ")"
+        query = "insert into " + tableName + "(" + ",".join(colNames) + ")" + "values(" + ",".join(modifiedValInsert) + ")"
         # map the column where values to be added 
         
         print(query) 
