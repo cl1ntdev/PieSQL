@@ -17,7 +17,6 @@ def main():
 
    print(">> INSERT DATA << ")
    print("3. Specific Data")
-   print("4. All Data")
 
    print(">> UPDATE DATA << ")
    print("5. Specific Data")
