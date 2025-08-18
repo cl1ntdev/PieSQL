@@ -20,10 +20,10 @@ def main():
     ╚═╝░░░░░╚═╝╚══════╝╚═════╝░░░░╚═╝░░░╚══════╝
     by - clint
     """
-   print(title)
    
    
    while not isEnd:
+    print(title)
 # Crud
     print(">> Read DATA <<")
     print("1. Specific Data") # done
@@ -37,6 +37,7 @@ def main():
     
     print(">> DELETE DATA << ")
     print("6. Specific Data")
+    print("7: Exit ")
     
     
     ch = int(input("Choice: "))
