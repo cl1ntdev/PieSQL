@@ -1,7 +1,14 @@
+import os 
 from ast import Delete
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
 from GET.Class.ReqClass import GetClass
+
+def clrscrn():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 host = '127.0.0.1'
 username = 'root'
@@ -10,6 +17,7 @@ db = "pyweirdool"
 port =3306
 
 def main():
+   clrscrn()
    isEnd = False
    title = """
     ██████╗░██╗███████╗░██████╗░██████╗░██╗░░░░░
@@ -81,6 +89,8 @@ def main():
                 delete.deleteData(table,colConstraint,colConstraintVal)
             case 7:
                 isEnd = True
+            case 8:
+                clrscrn()
 
 
 
