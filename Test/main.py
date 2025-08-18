@@ -78,7 +78,8 @@ def main():
                 colConstraintVal = "1"
                 delete = GetClass()
                 delete.deleteData(table,colConstraint,colConstraintVal)
-            
+            case 7:
+                isEnd = True
 
 
 
