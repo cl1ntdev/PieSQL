@@ -3,6 +3,7 @@ Goal: Backend Setup for future projects
 ## TODO
 
 8. <> Integrate db modification inside class so it wont be on a separate file 
+9. review code ya
 
 # NOTES
 -! Classes are still used to make query statements 
