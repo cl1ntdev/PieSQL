@@ -1,5 +1,6 @@
 from fastapi.param_functions import Query
 from connector.DbConnection import defaultConnection
+from mysql.connector import Error  
 
 class GetClass:
     def __init__(self):
@@ -48,7 +49,23 @@ class GetClass:
     # =========== #
     def readData(self,tableName):
         query = "select * from " +  tableName
-        print(query)
+        try:
+            connection = defaultConnection()
+            cursor = None
+            if connection is None: 
+                print("No connection req Class")
+                return;
+            else:
+                cursor = connection.cursor()
+            
+            print(query)
+            cursor.execute(query)
+            result = cursor.fetchall()
+            print(result)
+        
+        except Error as e:
+            print("error reqClass: ", e)
+        
         
     def readAllDataConst(self,tableName,colConstraint,colConstVal):
        
