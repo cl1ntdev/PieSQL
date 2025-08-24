@@ -1,7 +1,8 @@
 import mysql.connector
-from mysql.connector import Connect, Error
+from mysql.connector import Connect, Error, MySQLConnection
 from fastapi import FastAPI
 from connector.GlobalHost import MainHost
+from typing import Optional
 
 app = FastAPI()
 
@@ -31,7 +32,7 @@ def defaultConnection():
     try:
         connection = mysql.connector.connect(
             host = host,
-            username = user,
+            user = user,
             passwd = passwd,
             database = db
         )
