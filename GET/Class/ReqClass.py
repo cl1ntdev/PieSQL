@@ -1,5 +1,5 @@
 from fastapi.param_functions import Query
-
+from connector.DbConnection import defaultConnection
 
 class GetClass:
     def __init__(self):
