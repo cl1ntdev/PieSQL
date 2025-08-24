@@ -23,16 +23,16 @@ def createConnection(host,username,password,db):
 # This is the global host alternative, define variables here
 def defaultConnection():
     host = '127.0.0.1'
-    username = 'root'
-    password = 'clinT'
+    user = 'root'
+    passwd = 'clinT'
     db = "pyweirdool"
     port =3306
     connection = None
     try:
         connection = mysql.connector.connect(
             host = host,
-            username = username,
-            passwd = password,
+            username = user,
+            passwd = passwd,
             database = db
         )
     
