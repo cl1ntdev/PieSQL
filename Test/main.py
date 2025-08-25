@@ -62,7 +62,7 @@ def main():
                 data.readAllDataConst(tableName,colConst,colConstVal)
             case 2:
                 print("Choice is "+ str(ch) +" result is: ")
-                tableName = "word"
+                tableName = "words"
                 data = GetClass()
                 data.readData(tableName)
                 print(data)
