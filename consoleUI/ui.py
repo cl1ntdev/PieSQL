@@ -1,5 +1,6 @@
 from rich.console import Console
 
 console = Console()
-def textColor(color,text):
-    console.print("[bold" + color + "]" + text + "[/bold" + color + "]")
+def txtColor(color,text):
+    # console.print("[bold" + color + "]" + text + "[/bold" + color + "]")
+    return "[bold " + color +"]" + text + "[/bold " + color + "]"
