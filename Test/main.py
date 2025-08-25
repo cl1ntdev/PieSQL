@@ -3,7 +3,7 @@ from ast import Delete
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
 from GET.Class.ReqClass import GetClass
-
+from rich.console import Console 
 def clrscrn():
     if os.name == 'nt':
         os.system('cls')
@@ -33,28 +33,17 @@ def main():
    while not isEnd:
     print(title)
 # Crud
-    print(">> Read DATA <<")
-    print("1. Specific Data") # done
-    print("2. All Data") # done
-    print(">> >>   << << ")
+
+    print(">> Read DATA <<               >> INSERT DATA <<")
+    print("[1] Specific Data             [3] Specific Data")
+    print("[2] All Data")
+    print(">> UPDATE DATA <<             >> DELETE DATA << ")
+    print("[5]. Specific Data            [6] Specific Data ")
     print("\n")
-    print(">> INSERT DATA << ")
-    print("3. Specific Data")
-    print(">> >>   << << ")
-    print("\n")
-    print(">> UPDATE DATA << ")
-    print("5. Specific Data")
-    print(">> >>   << << ")
-    print("\n")
-    print(">> DELETE DATA << ")
-    print("6. Specific Data")
-    print(">> >>   << << ")
-    print("\n")
-    print("7: Exit ")
-    print("\n")
-    
+    print("[7] Exit Program ")
     
     ch = int(input("Choice: "))
+    print("\n")
     
     match ch:
             case 1:
