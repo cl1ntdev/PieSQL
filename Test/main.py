@@ -36,16 +36,22 @@ def main():
     print(">> Read DATA <<")
     print("1. Specific Data") # done
     print("2. All Data") # done
-    
+    print(">> >>   << << ")
+    print("\n")
     print(">> INSERT DATA << ")
     print("3. Specific Data")
-    
+    print(">> >>   << << ")
+    print("\n")
     print(">> UPDATE DATA << ")
     print("5. Specific Data")
-    
+    print(">> >>   << << ")
+    print("\n")
     print(">> DELETE DATA << ")
     print("6. Specific Data")
+    print(">> >>   << << ")
+    print("\n")
     print("7: Exit ")
+    print("\n")
     
     
     ch = int(input("Choice: "))
