@@ -3,7 +3,8 @@ from ast import Delete
 from copy import Error
 from connector.DbConnection import createConnection,defaultConnection
 from GET.Class.ReqClass import GetClass
-from rich.console import Console 
+from consoleUI.ui import txtColor
+from rich.console import Console
 def clrscrn():
     if os.name == 'nt':
         os.system('cls')
@@ -19,28 +20,47 @@ port =3306
 def main():
    clrscrn()
    isEnd = False
-   title = """
-    ██████╗░██╗███████╗░██████╗░██████╗░██╗░░░░░
-    ██╔══██╗██║██╔════╝██╔════╝██╔═══██╗██║░░░░░
-    ██████╔╝██║█████╗░░╚█████╗░██║██╗██║██║░░░░░
-    ██╔═══╝░██║██╔══╝░░░╚═══██╗╚██████╔╝██║░░░░░
-    ██║░░░░░██║███████╗██████╔╝░╚═██╔═╝░███████╗
-    ╚═╝░░░░░╚═╝╚══════╝╚═════╝░░░░╚═╝░░░╚══════╝
-    by - clint
-    """
+   pie = """ 
+    ██████╗░██╗███████╗
+    ██╔══██╗██║██╔════╝
+    ██████╔╝██║█████╗░░
+    ██╔═══╝░██║██╔══╝░░
+    ██║░░░░░██║███████╗
+    ╚═╝░░░░░╚═╝╚══════╝
+    """.strip("\n").splitlines()
    
+   _sql = """ 
+    ░██████╗░██████╗░██╗░░░░░
+    ██╔════╝██╔═══██╗██║░░░░░
+    ╚█████╗░██║██╗██║██║░░░░░
+    ░╚═══██╗╚██████╔╝██║░░░░░
+    ██████╔╝░╚═██╔═╝░███████╗
+    ╚═════╝░░░░╚═╝░░░╚══════╝
+    """.strip("\n").splitlines()
+    
+    # src https://fsymbols.com/generators/carty/
+   creator = "    - by cl1ntdev"
+   console = Console()
    
    while not isEnd:
-    print(title)
-# Crud
-
-    print(">> Read DATA <<               >> INSERT DATA <<")
-    print("[1] Specific Data             [3] Specific Data")
-    print("[2] All Data")
-    print(">> UPDATE DATA <<             >> DELETE DATA << ")
-    print("[5]. Specific Data            [6] Specific Data ")
+    for left, right in zip(pie, _sql):
+        console.print(f"[bold blue]{left}[/bold blue] [bold yellow]{right}[/bold yellow]")
+    console.print(txtColor("magenta",creator))
     print("\n")
-    print("[7] Exit Program ")
+    
+# Crud
+    console.print(txtColor("yellow","::") + txtColor("blue","READ DATA") + "          " +  txtColor("yellow","::") + txtColor("blue","INSERT DATA"))
+    console.print(txtColor("red","[") + txtColor("green","1") + txtColor("red","]") + txtColor("green","Specific Data") # Choice 1
+        + "     " +  txtColor("red","[") + txtColor("green","3") + txtColor("red","]") + txtColor("green","Specific Data")) # Choice 3
+    
+    
+    console.print(txtColor("red","[") + txtColor("green","2") + txtColor("red","]") + txtColor("green","All Data")) # Choice 2
+    print("\n")
+    console.print(txtColor("yellow","::") + txtColor("blue","UDPATE DATA") + "        " +  txtColor("yellow","::") + txtColor("blue","DELETE DATA"))
+    console.print(txtColor("red","[") + txtColor("green","5") + txtColor("red","]") + txtColor("green","Specific Data") # Choice 5
+        + "     " +  txtColor("red","[") + txtColor("green","6") + txtColor("red","]") + txtColor("green","Specific Data")) # Choice 6
+    print("\n")
+    console.print(txtColor("red","[7] Exit Program "))
     
     ch = int(input("Choice: "))
     print("\n")
